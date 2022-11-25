@@ -13,4 +13,57 @@ Coming Soon!
 ``searchList(list, {searchText: searchText, boldClassName: 'bold', labelKey: 'label'})``
 
 ### Full example: 
+``` js
+import React, { useState } from "react";
+import "./styles.css";
+import { searchList } from "search-list-text";
+function App() {
+  const [searchText, setSearchText] = useState("");
+  const list = [
+    {
+      label: "Nike Nike",
+      value: "nike"
+    },
+    {
+      label: "Addidas",
+      value: "addidas"
+    },
+    {
+      label: "Puma",
+      value: "puma"
+    },
+    {
+      label: "Niomi",
+      value: "niomi"
+    }
+  ];
+
+  const changeList = (event) => {
+    setSearchText(event.currentTarget.value);
+  };
+
+  const filteredList = searchList(list, {
+    searchText: searchText,
+    boldClassName: "bold",
+    labelKey: "label"
+  });
+
+  return (
+    <div>
+      <input type="text" onChange={changeList} />
+
+      <ul className="list">
+        {filteredList.map((item) => {
+          return <li dangerouslySetInnerHTML={{ __html: item.label }} />;
+        })}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+
+```
+
+### View full example on code sandbox: 
 [![Edit friendly-sky-uq8mql](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/friendly-sky-uq8mql?fontsize=14&hidenavigation=1&theme=dark)
