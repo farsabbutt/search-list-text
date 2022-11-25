@@ -108,4 +108,38 @@ describe('tests', () => {
     expect(actual).toEqual(expected)
   })
   
+
+  test('case#4 should have correct output', () => {
+    const list = [
+      {
+        label: 'Nike.com',
+        value: 'nike',
+      },
+      {
+        label: 'Addidas.com',
+        value: 'addidas',
+      },
+      {
+        label: 'Puma.com',
+        value: 'puma',
+      },
+    ]
+
+    const options: TextSearchOptions = {
+      labelKey: 'label',
+      searchText: 'n',
+      boldClassName: 'bold-text'
+    }
+
+    const expected = [
+      {
+        label: `<span class=\"bold-text\">N</span>ike.com`,
+        value: 'nike',
+      }
+    ]
+
+    const actual = searchList(list, options)
+    expect(actual).toEqual(expected)
+  })
+
 })
