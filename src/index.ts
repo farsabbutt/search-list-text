@@ -4,13 +4,6 @@ export interface TextSearchOptions {
   boldClassName?: string;
 }
 
-const getOppositeStringCase = (text: string) => {
-  if (text === text.toLowerCase()) {
-    return text.toUpperCase();
-  }
-  return text.toLowerCase();
-};
-
 const getBoldedLabel = (label: string, options: TextSearchOptions) => {
   const searchText = options.searchText;
   const className = options.boldClassName;
