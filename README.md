@@ -3,10 +3,10 @@ Filter a list for the given text and provide the formatted results with list ite
 
 [![typescript](https://img.shields.io/npm/types/search-list-text?style=plastic)](https://www.typescriptlang.org/)
 
-# 🚀 Demo
+## 🚀 Demo
 Coming Soon!
 
-# 📜 Usage
+## 📜 Usage
 1) Install package by running ``npm install search-list-text`` or ``yarn add search-list-text``
 2) Import the method to your project ``import { searchList } from 'search-list-text';``
 3) Use the method for example: 
