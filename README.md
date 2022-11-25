@@ -4,7 +4,7 @@ Filter a list for the given text and provide the formatted results with list ite
 [![typescript](https://img.shields.io/npm/types/search-list-text?style=plastic)](https://www.typescriptlang.org/)
 
 ## 🚀 Demo
-Coming Soon!
+![search-list-text demo](https://raw.githubusercontent.com/farsabbutt/search-list-text/main/demo.gif)
 
 ## 📜 Usage
 1) Install package by running ``npm install search-list-text`` or ``yarn add search-list-text``
