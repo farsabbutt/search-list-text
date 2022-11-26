@@ -1,6 +1,6 @@
 {
   "name": "search-list-text",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Filter a list for the given text and provide the formatted results with matched text to be boldable",
   "homepage": "https://github.com/farsabbutt/search-list-text",
   "main": "lib/index.js",
@@ -15,7 +15,11 @@
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
   },
-  "keywords": ["filter list", "list search", "list search highlight results"],
+  "keywords": [
+    "filter list",
+    "list search",
+    "list search highlight results"
+  ],
   "author": "Farsab Butt",
   "license": "ISC",
   "devDependencies": {
