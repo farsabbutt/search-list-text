@@ -140,4 +140,37 @@ describe('tests', () => {
     const actual = searchList(list, options);
     expect(actual).toEqual(expected);
   });
+
+  test('case#5 should have correct output', () => {
+    const list = [
+      {
+        label: 'Nike.com Nike',
+        value: 'nike',
+      },
+      {
+        label: 'Addidas.com',
+        value: 'addidas',
+      },
+      {
+        label: 'Puma.com',
+        value: 'puma',
+      },
+    ];
+
+    const options: TextSearchOptions = {
+      labelKey: 'label',
+      searchText: 'Ni',
+      boldClassName: 'bold-text',
+    };
+
+    const expected = [
+      {
+        label: `<span class=\"bold-text\">Ni</span>ke.com <span class=\"bold-text\">Ni</span>ke`,
+        value: 'nike',
+      },
+    ];
+
+    const actual = searchList(list, options);
+    expect(actual).toEqual(expected);
+  });
 });
