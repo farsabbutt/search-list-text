@@ -1,7 +1,8 @@
 {
   "name": "search-list-text",
   "version": "1.0.5",
-  "description": "",
+  "description": "Filter a list for the given text and provide the formatted results with matched text to be boldable",
+  "homepage": "https://github.com/farsabbutt/search-list-text",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest --config jestconfig.json",
@@ -14,8 +15,8 @@
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["filter list", "list search", "list search highlight results"],
+  "author": "Farsab Butt",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^28.1.0",
@@ -26,6 +27,7 @@
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.7.3"
   },
+  "bugs": "https://github.com/farsabbutt/search-list-text/issues",
   "files": [
     "lib/**/*"
   ]
