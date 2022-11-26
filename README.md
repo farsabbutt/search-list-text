@@ -1,5 +1,5 @@
 # :hourglass_flowing_sand: Search List Text
-Filter a list for the given text and provide the formatted results with list items labels to be boldable
+Filter a list for the given text and provide the formatted results with matched text to be boldable
 
 [![typescript](https://img.shields.io/npm/types/search-list-text?style=plastic)](https://www.typescriptlang.org/)
 
