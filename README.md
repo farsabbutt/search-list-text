@@ -1,10 +1,13 @@
 # :hourglass_flowing_sand: Search List Text
 Filter a list for the given text and provide the formatted results with matched text to be boldable
+
+[![typescript](https://img.shields.io/npm/types/search-list-text?style=plastic)](https://www.typescriptlang.org/)
+
 - Filter any list by a text field
 - Framework agnostic, can be used in React, Angular, Vue etc.
 - Flexible so that any styles can be applied 
 - Bolded text works for case insensitive matches
-[![typescript](https://img.shields.io/npm/types/search-list-text?style=plastic)](https://www.typescriptlang.org/)
+
 
 ## 🚀 Demo
 ![search-list-text demo](https://raw.githubusercontent.com/farsabbutt/search-list-text/main/demo.gif)
