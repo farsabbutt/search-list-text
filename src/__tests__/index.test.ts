@@ -1,7 +1,7 @@
 import { TextSearchOptions } from '../index';
 import { searchList } from '../index';
 describe('tests', () => {
-  test('case#1 should have correct output', () => {
+  test('returns a list of items with bolded matching labels', () => {
     const list = [
       {
         label: 'Nike',
@@ -34,7 +34,7 @@ describe('tests', () => {
     expect(actual).toEqual(expected);
   });
 
-  test('case#2 should have correct output', () => {
+  test('returns a list of items with bolded matching labels with global matches', () => {
     const list = [
       {
         label: 'Nike Nike',
@@ -67,7 +67,7 @@ describe('tests', () => {
     expect(actual).toEqual(expected);
   });
 
-  test('case#3 should have correct output', () => {
+  test('returns a list of items with bolded matching labels containing "." character', () => {
     const list = [
       {
         label: 'Nike.com',
@@ -108,7 +108,7 @@ describe('tests', () => {
     expect(actual).toEqual(expected);
   });
 
-  test('case#4 should have correct output', () => {
+  test('ignores upper case when searching for labels', () => {
     const list = [
       {
         label: 'Nike.com',
@@ -141,7 +141,7 @@ describe('tests', () => {
     expect(actual).toEqual(expected);
   });
 
-  test('case#5 should have correct output', () => {
+  test('ignores case when searching for labels', () => {
     const list = [
       {
         label: 'Nike.com Nike',
@@ -173,4 +173,19 @@ describe('tests', () => {
     const actual = searchList(list, options);
     expect(actual).toEqual(expected);
   });
+  
+   test('returns an empty list if no items match the search text', () => {
+    const list = [
+      { label: 'Hello, world!' },
+      { label: 'Goodbye, world.' },
+      { label: 'Farewell, world' }
+    ];
+    const options = {
+      labelKey: 'label',
+      searchText: 'universe',
+      boldClassName: 'bold'
+    };
+    expect(searchList(list, options)).toEqual([]);
+  });
+  
 });
