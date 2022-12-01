@@ -1,6 +1,6 @@
 {
   "name": "search-list-text",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Filter a list for the given text and provide the formatted results with matched text to be boldable",
   "homepage": "https://github.com/farsabbutt/search-list-text",
   "main": "lib/index.js",

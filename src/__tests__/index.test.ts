@@ -173,19 +173,14 @@ describe('tests', () => {
     const actual = searchList(list, options);
     expect(actual).toEqual(expected);
   });
-  
-   test('returns an empty list if no items match the search text', () => {
-    const list = [
-      { label: 'Hello, world!' },
-      { label: 'Goodbye, world.' },
-      { label: 'Farewell, world' }
-    ];
+
+  test('returns an empty list if no items match the search text', () => {
+    const list = [{ label: 'Hello, world!' }, { label: 'Goodbye, world.' }, { label: 'Farewell, world' }];
     const options = {
       labelKey: 'label',
       searchText: 'universe',
-      boldClassName: 'bold'
+      boldClassName: 'bold',
     };
     expect(searchList(list, options)).toEqual([]);
   });
-  
 });
